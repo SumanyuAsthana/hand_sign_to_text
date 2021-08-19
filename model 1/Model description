@@ -1,0 +1,3 @@
+We create a simple Conv3D- Lstm model.
+The reason behind that is that the images are all 3D and we use convolutions to find patterns in images & get better representations of these images, so we apply 3D convolutions on 3D images.
+Then LSTMs are used to find patterns in sequential data and we here have a sequence of data (20 images).
