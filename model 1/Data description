@@ -1,0 +1,7 @@
+We have a dataset of 402 videos.
+We have 8 classes of videos: accident ,help ,hot ,thief ,pain ,doctor ,call, lose .
+We break each video of this dataset into 20 frames each of (50*50*3) pixel shape as it is of RGB format.
+This results in an array of size (402,20,50,50,3) with values ranging from 0 to 225.
+This array (say X) and an array denoting class of each video (402,1) (say Y) are present in our drive (saved using code available in "data prep").
+We load X and perform standardization on it i.e. X=(X-mean(X))/std(X)
+We split the 402 videos into 301 training videos, 62 validation videos, 39 testing videos.
