@@ -4,3 +4,6 @@ Then we take an Inception model and pass the 17 frames through 17 parallel pipel
   A lambda layer that divides the entire input by 225 and then passes the result to the Inception model.
 Then we take all these 17 outputs and concatenate them.
 Finally this output is given to a LSTM.
+In this model I used fit.generator since 17*224*224*3 is very large.
+To use fit.generator I needed to create a class called DataGenerator that basically produces batches of desired size for each epoch.
+This way data is dynamically built before each epoch and even destroyed after each epoch. 
