@@ -1,0 +1,6 @@
+In this model we make use of transfer learning.
+Our model contains one input layer that expects an input of (batchSize,17,224,224,3).
+Then we take an Inception model and pass the 17 frames through 17 parallel pipelines each pipeline being the following:
+  A lambda layer that divides the entire input by 225 and then passes the result to the Inception model.
+Then we take all these 17 outputs and concatenate them.
+Finally this output is given to a LSTM.
