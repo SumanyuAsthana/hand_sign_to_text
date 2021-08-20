@@ -3,4 +3,5 @@ We get an input of shape (batchSize, 18, 224, 224, 3).
 We make 18 parallel pipelines and there is one commone VGG16 in each pipeling. Each pipeline is as follows:
   An input layer, followed by a lambda layer that normalizes i.e. divides the input by 255 followed by the VGG16 model.
 The 18 outputs from these pipelines are concatenated and this is then fed to an LSTM.
+Just as in model 2 we use a data generator here as well to produce dynamically in batch sizes.
 Finally a dense layer with softmax activation produces the output.
