@@ -1,0 +1,4 @@
+This model works on data where videos have strictly code genrated black background color.
+We did this because the previous three models had been given data that already had videos with black background while being shot.
+But this may not always happen. 
+So model 4 and model 5 are gonna look at videos that are going to have code generated black background.
