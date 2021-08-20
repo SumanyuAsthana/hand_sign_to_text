@@ -1,0 +1,4 @@
+This model makes use of transfer learning.
+The data we input is of the shape (batchSize,20,224,224,3).
+We process 20 parallel images using a lambda layer that perform /255 on the data followed by a common Inception V3 layer.
+We get a model that reports 100% accuracy on the test set.
