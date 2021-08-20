@@ -7,3 +7,4 @@ Finally this output is given to a LSTM.
 In this model I used fit.generator since 17*224*224*3 is very large.
 To use fit.generator I needed to create a class called DataGenerator that basically produces batches of desired size for each epoch.
 This way data is dynamically built before each epoch and even destroyed after each epoch. 
+Finally a dense layer with softmax activation produces the output.
